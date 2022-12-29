@@ -1,5 +1,18 @@
+:root{
+    --blue: #3535ec;
+    --dark-blue: #120945;
+    --gray: #d4d7f5;
+    --green: #306753;
+    --pink: #de7eb6;
+    --yellow: #f2ad41;
+    --white: #ffffff;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    font-family: 'Livvic', Arial, Helvetica, sans-serif;
+    background-color: var(--blue);
 }
