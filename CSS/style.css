@@ -1,3 +1,4 @@
+/* COLOR PALETTE  */
 :root{
     --blue: #3535ec;
     --dark-blue: #120945;
@@ -7,12 +8,61 @@
     --yellow: #f2ad41;
     --white: #ffffff;
 }
-*{
+/* CSS RESET */
+*,
+::before,
+::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+img{
+    max-width: 100%;
+}
+/* UTILITIES */
 body{
     font-family: 'Livvic', Arial, Helvetica, sans-serif;
     background-color: var(--blue);
+}
+.container{
+    width: 350px;
+    margin: 32px auto 0 auto;
+}
+/* COUNTDOWN */
+.xmas-stage{
+    position: relative;
+}
+.panel{
+    background-color: var(--dark-blue);
+    padding: 16px 24px;
+    border-radius: 8px;
+
+    position: absolute;
+    top: 90px;
+    width: 100%;
+}
+h1{
+    text-align: center;
+    color: var(--pink);
+    margin-bottom: 24px;
+    font-size: 30px;
+}
+.counter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.counter-block{
+    color: var(--white);
+    text-align: center;
+    font-weight: 600;
+}
+.counter-block-number{
+    font-size: 48px;
+}
+.counter-block-label{
+    font-size: 20px;
+}
+.counter-block:last-child{
+    color: var(--yellow);
 }
