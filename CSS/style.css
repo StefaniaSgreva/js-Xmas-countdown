@@ -1,4 +1,6 @@
-/* COLOR PALETTE  */
+/*****************************
+        COLOR PALETTE 
+******************************/
 :root{
     --blue: #3535ec;
     --dark-blue: #120945;
@@ -8,7 +10,9 @@
     --yellow: #f2ad41;
     --white: #ffffff;
 }
-/* CSS RESET */
+/*****************************
+        CSS RESET
+******************************/
 *,
 ::before,
 ::after{
@@ -19,18 +23,24 @@
 img{
     max-width: 100%;
 }
-/* UTILITIES */
+/*****************************
+        UTILITIES
+******************************/
 body{
     font-family: 'Livvic', Arial, Helvetica, sans-serif;
     background-color: var(--blue);
+    line-height: 1;
 }
 .container{
     width: 350px;
     margin: 32px auto 0 auto;
 }
-/* COUNTDOWN */
+/*****************************
+        COUNTDOWN
+******************************/
 .xmas-stage{
     position: relative;
+    height: 600px;
 }
 .panel{
     background-color: var(--dark-blue);
@@ -65,4 +75,77 @@ h1{
 }
 .counter-block:last-child{
     color: var(--yellow);
+}
+/****** gifts ******/
+.gift{
+    position: absolute;
+    width: 120px;
+    z-index: 1;
+}
+.gift:hover{
+   animation-name: jingle;
+   animation-duration: 0.2s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+}
+.gift_1{
+    bottom: 55px;
+    right: 30px;
+}
+.gift_2{
+    bottom: 50px;
+    left: 36px;
+}
+.gift_3{
+    bottom: 110px;
+    left: 68px;
+    width: 60px;
+}
+/******* tree decorations *******/
+.decoration{
+    position: absolute;
+    width: 65px;
+}
+.decoration:hover{
+    animation-name: bump;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.decoration_1{
+    top: 340px;
+    left: 86px;
+}
+.decoration_2{
+    top: 274px;
+    left: 110px;
+}
+.decoration_3{
+    top: 255px;
+    right: 102px;
+}
+.decoration_4{
+    top: 360px;
+    right: 75px;
+}
+.decoration_5{
+    top: 326px;
+    left: 155px;
+}
+/*****************************
+        ANIMATIONS
+******************************/
+@keyframes jingle {
+    from{
+        transform: rotate(-15deg);
+    } to{
+        transform: rotate(15deg);
+    }
+}
+@keyframes bump {
+    from{
+        transform: scale(1);
+    } to{
+        transform: scale(1.2);
+    }
 }
